@@ -89,7 +89,6 @@ popd
 
 %install
 %py3_install
-rm -vrf %{buildroot}%{python3_sitelib}/mypy/{test,typeshed/tests}
 
 # move html docs into buildroot
 mkdir -p %{buildroot}%{_docdir}/%{name}/
@@ -99,7 +98,7 @@ mv -f docs/build/html %{buildroot}%{_docdir}/%{name}/
 %check
 export MYPYC_OPT_LEVEL=2
 if [ $(getconf LONG_BIT) -ne 64 ]; then
-  # https://github.com/python/mypy/issues/11148
+# https://github.com/python/mypy/issues/11148
   ignore+="not testSubclassSpecialize and not testMultiModuleSpecialize and "
 fi
 
