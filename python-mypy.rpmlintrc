@@ -1,0 +1,8 @@
+# Silence devel-file warnings
+addFilter("W: devel-file-in-non-devel-package")
+# Silence zero-length __init__.pyi errors
+addFilter("E: zero-length")
+# Silence no man page warnings
+addFilter("W: no-manual-page-for-binary")
+# Silence files-duplicate warnings
+addFilter("W: files-duplicate")
