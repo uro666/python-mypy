@@ -12,7 +12,6 @@ URL:            https://github.com/python/mypy
 Source:         https://files.pythonhosted.org/packages/source/m/mypy/%{module}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:	help2man
 BuildRequires:	python
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(setuptools)
