@@ -1,5 +1,6 @@
 %define module mypy
-%bcond_without test
+# disabled tests on abf
+%bcond_with test
 
 Name:           python-mypy
 Version:        1.15.0
@@ -23,12 +24,11 @@ BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(tomli)
 BuildRequires:	python%{pyver}dist(types-psutil)
 BuildRequires:	python%{pyver}dist(types-setuptools)
-# docs
+# for html doc generation
 BuildRequires:	python%{pyver}dist(furo)
 BuildRequires:	python%{pyver}dist(sphinx)
 BuildRequires:	python%{pyver}dist(myst-parser)
 BuildRequires:	python%{pyver}dist(sphinx-inline-tabs)
-
 %if %{with test}
 BuildRequires:  gcc-c++
 BuildRequires:	python%{pyver}dist(attrs)
